@@ -150,7 +150,7 @@ void tputchar(char value) {
 	else if (value == '\b') {
 		int index = coord.y * width + coord.x - 1;
 		vga_buffer[index].value = ' ';
-		vga_buffer[index].theme = coord.theme;				
+		vga_buffer[index].theme = coord.theme;
 		coord.x--;
 	}
 	else {
@@ -234,7 +234,7 @@ void tprintf(char *text, ...) {
 void tclear() {
 	int count = 0;
 	coord.x = 0;
-	// count the line 
+	// count the line
 	while (coord.y < width) {
 		// count x
 		while (coord.x < width) {

@@ -46,7 +46,7 @@ void Pic_Disable() {
     outByte(PIC2_DATA, 0xff);
 }
 
-void Pic_Rremap(uint8_t ineter_start, uint8_t ineter_end) {
+void Pic_Remap(uint8_t ineter_start, uint8_t ineter_end) {
     outByte(PIC1_COMMAND, ICW1_INIT | ICW1_ICW4);
 	outByte(PIC2_COMMAND, ICW1_INIT | ICW1_ICW4);
 	outByte(PIC1_DATA, ineter_start);
